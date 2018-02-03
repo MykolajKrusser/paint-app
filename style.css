@@ -1,6 +1,155 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    color: black;
+    background: url(img/b.jpg) center no-repeat;
+    background-size: cover;
+}
+
+section {
+    min-height: 100vh;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+}
+
+/*
+preLoader styles start
+ */
+
+#preLoader{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    background-color: #353535;
+}
+.container {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.item-1 {
+    background-color: #FA5667;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-2 {
+    background-color: #7A45E5;
+    top: 0;
+    right: 0;
+    animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-3 {
+    background-color: #1B91F7;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+.item-4 {
+    background-color: #FAC24C;
+    bottom: 0;
+    left: 0;
+    animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+}
+
+@keyframes item-1_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(0, 100px)}
+    50% {transform: translate(100px, 100px)}
+    75% {transform: translate(100px, 0)}
+}
+
+@keyframes item-2_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(-100px, 0)}
+    50% {transform: translate(-100px, 100px)}
+    75% {transform: translate(0, 100px)}
+}
+
+@keyframes item-3_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(0, -100px)}
+    50% {transform: translate(-100px, -100px)}
+    75% {transform: translate(-100px, 0)}
+}
+
+@keyframes item-4_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(100px, 0)}
+    50% {transform: translate(100px, -100px)}
+    75% {transform: translate(0, -100px)}
+}
+
+/*
+preLoader styles end
+ */
+
 #test{
-    width: 400px;
-    height: 400px;
-    border: 1px solid black;
-    margin: 50px;
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    background-color: white;
+}
+
+.flexRow{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+.btn{
+    outline: none;
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 14px;
+    padding: 5px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
 }
