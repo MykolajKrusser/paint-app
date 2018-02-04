@@ -1,6 +1,7 @@
 /*
 main settings of tags html, body and section
  */
+
 html, body{
     margin: 0;
     padding: 0;
@@ -117,6 +118,14 @@ its magic changes the position of the rectangle in 1.8 seconds, changing "transf
 preLoader styles end
  */
 
+.panel{
+    height: 45px;
+    background-color: rgba(235, 242, 29, 0.7);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
+}
+
 #test{
     width: 500px;
     height: 500px;
@@ -127,6 +136,7 @@ preLoader styles end
 }
 
 .flexRow{
+    color: #D83218;
     width: 500px;
     display: flex;
     flex-direction: row;
@@ -145,7 +155,7 @@ preLoader styles end
 
 .btn{
     outline: none;
-    background-color: #f1f1f1;
+    background-color: rgb(190, 245, 66);
     color: black;
     font-size: 14px;
     padding: 5px 5px;
@@ -158,7 +168,7 @@ preLoader styles end
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: rgb(60, 233, 227);
     color: white;
     transition: all 0.5s ease;
 }
